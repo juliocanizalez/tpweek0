@@ -1,1 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
 
+:root {
+  --primary-color: #f5e771;
+  --white        : #fafafa;
+  --black        : #0d0d0d;
+}
+
+html {
+  background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+  font-family     : 'Poppins', sans-serif;
+  margin          : 0;
+  padding         : 0;
+}
+
+li {
+  list-style: none;
+  display   : inline-block;
+}
+
+.nav-menu {
+  display              : grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows   : 30px;
+  grid-gap             : 0.5rem;
+  padding              : 0;
+}
+
+.container {
+  max-width   : 1200px;
+  margin-left : auto;
+  margin-right: auto;
+}
+
+.nav-element {
+  text-align      : center;
+  line-height     : 30px;
+  place-self      : center;
+  width           : 100%;
+  background-color: var(--primary-color);
+}
+
+.nav-element a {
+  color         : #0d0d0d;
+  text-transform: uppercase;
+  font-weight   : 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-section {
+  display              : grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap             : 0.7rem;
+}
+
+.img-section {
+  grid-column: 1/9;
+  grid-row   : 1/3;
+  position   : relative;
+}
+
+.img-section img {
+  max-width: 100%;
+  height   : auto;
+  display  : block;
+}
+
+.price-section {
+  display         : grid;
+  width           : 100%;
+  height          : 100%;
+  background-color: var(--primary-color);
+  grid-column     : 9/13;
+}
+
+.price-section div {
+  justify-self: center;
+  align-self  : center;
+  margin      : 0;
+  text-align  : center;
+}
+
+.price-description h2 {
+  margin     : 0;
+  font-weight: 300;
+  font-size  : 3.8rem;
+}
+
+.price-description p {
+  margin     : 0;
+  font-weight: 600;
+  font-size  : 1.1rem;
+}
+
+.image-description {
+  position: absolute;
+  top     : 30%;
+  left    : 5%;
+}
+
+.image-description * {
+  padding         : 0.5rem;
+  background-color: var(--primary-color);
+  font-weight     : 600;
+}
+
+.product-section {
+  display              : grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows   : 175px;
+  grid-gap             : 1rem;
+  margin               : 1.2rem 0;
+}
+
+.product {
+  background-color  : var(--white);
+  width             : 100%;
+  height            : 100%;
+  display           : grid;
+  grid-template-rows: 70px 30px 75px;
+}
+
+.product * {
+  justify-self: center;
+  align-self  : center;
+  margin      : 0;
+  padding     : 0;
+  text-align  : center;
+}
+
+.product img {
+  align-self: end;
+}
+
+.product p {
+  font-weight: 300;
+}
+
+.featured-product {
+  background-color     : var(--white);
+  height               : 400px;
+  display              : grid;
+  width                : 100%;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.featured-product img {
+  grid-column: 1/5;
+  transition : transform .7s;
+  justify-self: start;
+  align-self: center;
+}
+
+.featured-product img:hover {
+  transform: scale(1.1);
+}
+
+.featured-product--detail {
+  display    : grid;
+  grid-column: 5/10;
+  align-self : center;
+}
+
+.featured-product--detail * {
+  margin: 0.2rem 0;
+}
+
+.featured-product--detail button {
+  margin-top: 0.9rem;
+}
+
+.btn {
+  width           : 150px;
+  background-color: var(--primary-color);
+  color           : var(--black);
+  border          : none;
+  padding         : 0.9rem 0;
+  font-weight     : 600;
+  font-size       : 1.1rem;
+  cursor          : pointer;
+  transition      : 0.25s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 18px 0 rgba(#000, 0.1);
+  transform : translateY(-6px);
+}
+
+.arrow {
+  border      : solid var(--black);
+  border-width: 0 3px 3px 0;
+  display     : inline-block;
+  padding     : 4px;
+}
+
+.right {
+  transform        : rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.section-title {
+  display              : grid;
+  grid-template-columns: auto 170px auto;
+  color                : var(--white);
+}
+
+.section-title h3 {
+  margin    : 1rem 0.5rem;
+  text-align: center;
+}
+
+.gradient-left {
+  background-image: linear-gradient(to right, #00000000, var(--primary-color));
+  height          : 15px;
+  align-self      : center;
+}
+
+.gradient-right {
+  background-image: linear-gradient(to left, #00000000, var(--primary-color));
+  height          : 15px;
+  align-self      : center;
+}
+
+.galery {
+  display              : grid;
+  grid-gap             : 0.6rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.galery-image {
+  aspect-ratio: 1;
+  height      : 100%;
+  width       : 100%;
+}
+
+.galery-image img {
+  width     : 100%;
+  height    : 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.galery-image img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1100px) {
+  .galery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-product img{
+    grid-column: 1/6;
+    align-self: center;
+  }
+  .featured-product--detail{
+    grid-column: 6/10;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 98%;
+  }
+
+  .galery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .header-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .img-section {
+    grid-column: 1/2;
+    grid-row   : 1/2;
+  }
+
+  .img-section img {
+    height    : 350px;
+    object-fit: cover;
+  }
+
+  .price-section {
+    grid-column: 1/2;
+    height     : 200px;
+  }
+
+  .featured-product {
+    grid-template-columns: repeat(1, 1fr);
+    height               : auto;
+    padding-bottom       : 1rem;
+  }
+
+  .featured-product img {
+    grid-column : 1/2;
+    width       : 80%;
+    justify-self: center;
+  }
+
+  .featured-product--detail {
+    grid-column: 1/2;
+    text-align : center;
+  }
+
+  .btn {
+    justify-self: center;
+  }
+
+  .nav-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
